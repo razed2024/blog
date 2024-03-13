@@ -18,10 +18,18 @@ class HomeController extends Controller
             } elseif($userType=='admin'){
                 return view('admin.adminHome');
 
+            }elseif($userType =='agent'){
+                return view('admin.agentHome');
+
             }
+           
         }
         else{
              return redirect()->back();
         }
     }
+    // public function post(){
+    //     return view("admin.post");
+
+    // }
 }
