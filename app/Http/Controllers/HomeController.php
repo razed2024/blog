@@ -14,7 +14,7 @@ class HomeController extends Controller
 
             $userType = Auth()->user()->userType;
             if($userType == 'user'){
-                return view('dashboard');
+                return view('home.homepage');
             } elseif($userType=='admin'){
                 return view('admin.adminHome');
 
@@ -32,4 +32,7 @@ class HomeController extends Controller
     //     return view("admin.post");
 
     // }
+    public function homepage(){
+        return view('home.homepage');
+    }
 }
